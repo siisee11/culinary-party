@@ -19,10 +19,30 @@ export function GourmetBirthdayInvitation() {
   const [name, setName] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (name.trim()) {
-      setSubmitted(true);
+      try {
+        const response = await fetch("/api/rsvp", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name }),
+        });
+
+        const result = await response.json();
+
+        if (!response.ok) {
+          console.error(result.error);
+          // Optionally display an error message to the user
+        } else {
+          setSubmitted(true);
+        }
+      } catch (error) {
+        console.error("An error occurred:", error);
+        // Optionally display an error message to the user
+      }
     }
   };
 
@@ -97,8 +117,8 @@ export function GourmetBirthdayInvitation() {
                   Delighted to have you join us, {name}!
                 </p>
                 <div className="flex justify-center space-x-6 mt-6">
-                  <Utensils className="h-8 w-8" />
-                  <Martini className="h-8 w-8" />
+                  <Utensils className="h-6 w-6" />
+                  <Martini className="h-6 w-6" />
                 </div>
               </div>
             )}
