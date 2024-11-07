@@ -42,7 +42,7 @@ export function GourmetBirthdayInvitation() {
         >
           <CardHeader className="text-center border-b border-gray-300 pb-6">
             <CardTitle
-              className={`text-4xl mb-2 font-serif ${
+              className={`text-4xl mb-2  ${
                 submitted ? "text-white" : "text-gray-900"
               }`}
             >
@@ -60,43 +60,43 @@ export function GourmetBirthdayInvitation() {
             {!submitted ? (
               <>
                 <div className="text-center mb-8 space-y-6">
-                  <p className="italic text-gray-700 font-libre">
-                    You are cordially invited to a
+                  <p className="text-xl font-semibold  text-gray-900">
+                    Chungmuro Matpia&apos;s Birthday Party
                   </p>
-                  <p className="text-2xl font-semibold font-serif text-gray-900">
-                    Gourmet Birthday Soirée
-                  </p>
+                  <p className="text-gray-700">에 초대합니다.</p>
                   <div className="flex justify-center space-x-6 text-gray-700">
                     <Utensils className="h-6 w-6 hover:text-gold transition duration-300" />
                     <GlassWater className="h-6 w-6 hover:text-gold transition duration-300" />
                   </div>
-                  <p className="text-gray-700 font-libre">
-                    Please RSVP with your esteemed presence
+                  <p className="text-gray-700">11/30 (토) 18:00</p>
+                  <p className="text-gray-700">충무로역 근처</p>
+                  <p className="text-xs text-gray-500">
+                    (소정의 참여비가 있을 수 있습니다.)
                   </p>
                 </div>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <Input
                     type="text"
-                    placeholder="Enter your name"
+                    placeholder="이름을 입력해주세요."
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full bg-white border-gray-300 focus:ring-0 focus:border-gray-500 font-libre"
+                    className="w-full bg-white border-gray-300 focus:ring-0 focus:border-gray-500"
                     required
                   />
                   <Button
                     type="submit"
-                    className="w-full bg-black hover:bg-gray-800 text-white font-libre transition duration-300"
+                    className="w-full bg-black hover:bg-gray-800 text-white  transition duration-300"
                   >
-                    Confirm Attendance
+                    참여 신청하기
                   </Button>
                 </form>
               </>
             ) : (
               <div className="text-center space-y-6 text-white">
-                <p className="text-xl font-semibold font-serif">
+                <p className="text-xl font-semibold">
                   Delighted to have you join us, {name}!
                 </p>
-                <p className="italic font-libre">
+                <p className="italic ">
                   Prepare your palate for an unforgettable gastronomic
                   experience.
                 </p>
