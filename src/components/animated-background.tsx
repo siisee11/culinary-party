@@ -13,8 +13,8 @@ export function AnimatedBackground({ submitted }: AnimatedBackgroundProps) {
   useAnimationFrame((t) => {
     const path = pathRef.current;
     if (path) {
-      const waveAmplitude = 4; // Adjust the wave height
-      const waveFrequency = 0.0003; // Adjust the wave speed
+      const waveAmplitude = 2; // Adjust the wave height
+      const waveFrequency = 0.0004; // Adjust the wave speed
       const waveLength = 1000; // Adjust the wave length
 
       // Generate the wave path

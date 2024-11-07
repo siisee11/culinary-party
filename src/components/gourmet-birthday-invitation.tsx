@@ -12,7 +12,7 @@ import {
   CardTitle,
   CardDescription,
 } from "@/components/ui/card";
-import { Utensils, GlassWater } from "lucide-react";
+import { Utensils, Martini } from "lucide-react";
 import { AnimatedBackground } from "@/components/animated-background";
 
 export function GourmetBirthdayInvitation() {
@@ -35,7 +35,7 @@ export function GourmetBirthdayInvitation() {
       <div className="absolute inset-0 flex items-center justify-center p-4">
         <Card
           className={`w-full max-w-md ${
-            submitted ? "bg-black/80" : "bg-white/80"
+            submitted ? "bg-stone-800/80" : "bg-stone-50/90"
           } backdrop-blur-md shadow-lg border border-gray-200
           transition duration-1000 ease-in-out
           `}
@@ -44,7 +44,7 @@ export function GourmetBirthdayInvitation() {
             <CardTitle
               className={`text-4xl mb-2  ${
                 submitted ? "text-white" : "text-gray-900"
-              }`}
+              } font-almendra`}
             >
               Culinary Class Party
             </CardTitle>
@@ -61,12 +61,12 @@ export function GourmetBirthdayInvitation() {
               <>
                 <div className="text-center mb-8 space-y-6">
                   <p className="text-xl font-semibold  text-gray-900">
-                    Chungmuro Matpia&apos;s Birthday Party
+                    Jay&apos;s Birthday Party
                   </p>
                   <p className="text-gray-700">에 초대합니다.</p>
-                  <div className="flex justify-center space-x-6 text-gray-700">
-                    <Utensils className="h-6 w-6 hover:text-gold transition duration-300" />
-                    <GlassWater className="h-6 w-6 hover:text-gold transition duration-300" />
+                  <div className="flex justify-center space-x-6 text-gray-700 hover:text-gray-900 transition duration-300">
+                    <Utensils className="h-6 w-6" />
+                    <Martini className="h-6 w-6" />
                   </div>
                   <p className="text-gray-700">11/30 (토) 18:00</p>
                   <p className="text-gray-700">충무로역 근처</p>
@@ -96,13 +96,9 @@ export function GourmetBirthdayInvitation() {
                 <p className="text-xl font-semibold">
                   Delighted to have you join us, {name}!
                 </p>
-                <p className="italic ">
-                  Prepare your palate for an unforgettable gastronomic
-                  experience.
-                </p>
                 <div className="flex justify-center space-x-6 mt-6">
                   <Utensils className="h-8 w-8" />
-                  <GlassWater className="h-8 w-8" />
+                  <Martini className="h-8 w-8" />
                 </div>
               </div>
             )}
