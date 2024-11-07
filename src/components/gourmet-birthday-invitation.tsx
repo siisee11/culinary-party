@@ -13,7 +13,7 @@ import {
 import { Utensils, GlassWater } from "lucide-react";
 
 export function GourmetBirthdayInvitation() {
-  const [name, setName] = useState("''");
+  const [name, setName] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -25,19 +25,19 @@ export function GourmetBirthdayInvitation() {
 
   return (
     <div className="w-full min-h-screen bg-slate-50 flex items-center justify-center p-4">
-      <Card className="w-full max-w-md bg-cream shadow-xl border-2 border-amber-900">
-        <CardHeader className="text-center border-b-2 border-amber-900 pb-4">
-          <CardTitle className="text-3xl font-serif text-amber-900 mb-2">
+      <Card className="w-full max-w-md bg-cream shadow-xl border-2 border-slate-900">
+        <CardHeader className="text-center border-b-2 border-slate-900 pb-4">
+          <CardTitle className="text-3xl font-serif text-slate-900 mb-2">
             Le Anniversaire
           </CardTitle>
-          <CardDescription className="text-lg font-serif text-amber-800">
+          <CardDescription className="text-lg font-serif text-slate-800">
             A Culinary Celebration
           </CardDescription>
         </CardHeader>
         <CardContent className="pt-6">
           {!submitted ? (
             <>
-              <div className="text-center mb-6 text-amber-900 space-y-4">
+              <div className="text-center mb-6 text-slate-900 space-y-4">
                 <p className="font-serif italic">
                   You are cordially invited to a
                 </p>
@@ -58,19 +58,19 @@ export function GourmetBirthdayInvitation() {
                   placeholder="Enter your name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full border-amber-900 focus:ring-amber-500 font-serif"
+                  className="w-full border-slate-900 focus:ring-slate-500 font-serif"
                   required
                 />
                 <Button
                   type="submit"
-                  className="w-full bg-amber-900 hover:bg-amber-800 text-slate-50 font-serif"
+                  className="w-full bg-slate-900 hover:bg-slate-800 text-slate-50 font-serif"
                 >
                   Confirm Attendance
                 </Button>
               </form>
             </>
           ) : (
-            <div className="text-center space-y-4 text-amber-900">
+            <div className="text-center space-y-4 text-slate-900">
               <p className="text-xl font-semibold font-serif ">
                 Delighted to have you join us, {name}!
               </p>
