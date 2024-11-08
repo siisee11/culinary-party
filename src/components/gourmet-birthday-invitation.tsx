@@ -19,8 +19,7 @@ export function GourmetBirthdayInvitation() {
   const [name, setName] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     if (name.trim()) {
       try {
         const response = await fetch("/api/rsvp", {
@@ -106,6 +105,7 @@ export function GourmetBirthdayInvitation() {
                   <Button
                     type="submit"
                     className="w-full bg-black hover:bg-gray-800 text-white  transition duration-300"
+                    disabled={!name.trim()}
                   >
                     참여 신청하기
                   </Button>
