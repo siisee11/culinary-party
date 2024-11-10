@@ -22,6 +22,7 @@ export function GourmetBirthdayInvitation() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (name.trim()) {
+      setSubmitted(true);
       try {
         const response = await fetch("/api/rsvp", {
           method: "POST",
