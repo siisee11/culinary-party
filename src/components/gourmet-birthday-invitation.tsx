@@ -94,6 +94,9 @@ export function GourmetBirthdayInvitation() {
                   <p className="text-xs text-gray-500">
                     (소정의 참여비가 있을 수 있습니다.)
                   </p>
+                  <p className="text-xs text-gray-500">
+                    (인원 제한이 있을 수 있습니다.)
+                  </p>
                 </div>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <Input
